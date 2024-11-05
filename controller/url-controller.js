@@ -18,12 +18,7 @@ const urlHandler = async (req, res) => {
       visitHistory: [],
     });
     console.log(newUrl.shortID);
-    const urls = await URL.find({});
-    // Respond with the new shortened URL information
-    // return res.status(201).json({
-    //   message: "URL shortened successfully",
-    //   data: newUrl,
-    // });
+    const urls= await URL.find({})
     return res.render("home", {
       newUrl,
       urls,
